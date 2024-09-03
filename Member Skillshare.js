@@ -1,0 +1,13 @@
+function readSkillShare() {
+ var conn = Jdbc.getConnection(url, username, password);
+ var stmt = conn.createStatement();
+
+let cell = setupCell("Dashboard","B16")
+let sheet = setupSheet("SkillShare")
+
+ var results = stmt.executeQuery('select distinct `nickname` as "Facebook Name",  skillshare_climbing_indoors_first_experience as "First Climbing Experience",  skillshare_climbing_indoors_top_rope_belaying as "Top Rope Belaying",  skillshare_climbing_indoors_lead_belaying as "Lead Belaying",  skillshare_climbing_indoors_seconding_leads as "Seconding Leads",  skillshare_climbing_indoors_lead_climbing as "Lead Climbing",  skillshare_climbing_indoors_lead_falls as "Lead Falls",  skillshare_climbing_indoors_autobelay as "Auto Belay",  skillshare_climbing_indoors_bouldering_area as "Bouldering Area",  skillshare_climbing_indoors_top_rope_trainer_trainer as "Top Rope Trainer Trainer",  skillshare_climbing_indoors_lead_belaying_trainer_trainer as "Lead Belaying Trainer Trainer",  skillshare_climbing_indoors_lead_climbing_trainer_trainer as "Lead Climbing Trainer Trainer",  skillshare_climbing_trad_seconding as "Trad Seconding",  skillshare_climbing_trad_leading_trad as "Leading Trad",  skillshare_climbing_trad_setting_up_top_rope as "Setting Up Top Rope",  skillshare_climbing_trad_belaying_half_ropes as "Belaying Half Ropes",  skillshare_climbing_trad_abseiling as "Abseiling",  skillshare_climbing_trad_retrievable_abseils as "Retrievable Abseils",  skillshare_climbing_trad_multipitch_anchors as "Multipitch Anchors",  skillshare_climbing_trad_belay_escape as "Belay Escape",  skillshare_climbing_trad_prussiking_upwards as "Prussiking Upwards",  skillshare_climbing_trad_hauling_systems as "Hauling Systems",  skillshare_climbing_trad_moving_together as "Moving Together",  skillshare_climbing_trad_big_walling as "Big Walling",  skillshare_climbing_sport_seconding_outside as "Sport Seconding Outside",  skillshare_climbing_sport_lead_climbing as "Sport Lead Climbing",  skillshare_climbing_sport_stripping_route as "Stripping Route",  skillshare_climbing_sport_setting_up_top_rope as "Setting Up Top Rope",  skillshare_climbing_sport_multipitch_anchors as "Multipitch Anchors",  skillshare_climbing_sport_abseiling_multipitch_routes as "Abseiling Multipitch Routes", `admin-outdoors-requests-notes` "Requests and notes" from wp_member_db db JOIN wp_member_db_skillshare sk on db.id = sk.id where cc_member="yes"  order by `skillshare_climbing_trad_leading_trad` desc,`skillshare_climbing_sport_lead_climbing` desc');
+appendToSheet(sheet, results);
+
+results.close();
+stmt.close();
+} 
