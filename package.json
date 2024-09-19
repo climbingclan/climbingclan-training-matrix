@@ -1,7 +1,7 @@
 {
-  "name": "qms-audit-project",
-  "version": "1.0.0",
-  "description": "A Google Apps Script to document qms layout and functionality.",
+  "name": "climbingclan-training-matrix",
+  "version": "1.0.1",
+  "description": "A Google Apps Script to retrieve training reports for clan decision making.",
   "scripts": {
     "push": "clasp push --auth ~/.clasprc.timmydobson.json",
     "pull": "clasp pull --auth ~/.clasprc.timmydobson.json",
@@ -14,14 +14,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tdobson/qms-audit-project.git"
+    "url": "git+https://github.com/climbingclan/climbingclan-training-matrix.git"
   },
   "author": "Tim Dobson",
   "license": "All Rights Reserved",
   "bugs": {
-    "url": "https://github.com/tdobson/qms-audit-project/issues"
+    "url": "https://github.com/climbingclan/climbingclan-training-matrix/issues"
   },
-  "homepage": "https://github.com/tdobson/qms-audit-project#readme",
+  "homepage": "https://github.com/climbingclan/climbingclan-training-matrix#readme",
   "dependencies": {
     "@types/google-apps-script": "^1.0.56",
     "clasp": "^1.0.0"
