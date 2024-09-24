@@ -17,7 +17,7 @@
     "url": "git+https://github.com/climbingclan/climbingclan-training-matrix.git"
   },
   "author": "Tim Dobson",
-  "license": "All Rights Reserved",
+  "license": "GPL-3.0-or-later",
   "bugs": {
     "url": "https://github.com/climbingclan/climbingclan-training-matrix/issues"
   },
